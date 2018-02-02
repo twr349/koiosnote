@@ -76,4 +76,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  
+  # Devise Configuration 
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = { host: 'https://koiosnote-twr349.c9users.io' }
 end
