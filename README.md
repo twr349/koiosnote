@@ -1,3 +1,3 @@
 # Koios Note
 
-Note taking app for the intellectual titan. 
+A note taking app for the intellectual titan. 
