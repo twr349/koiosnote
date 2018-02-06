@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   
-  resources :topics
   
-  resources :subjects
+  
+  resources :subjects do
+    resources :topics  
+  end
 
   devise_for :users
 
