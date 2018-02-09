@@ -26,7 +26,16 @@ user = User.create!(
 )
 user.save!
 
+user2 = User.create!(
+    email: 'user2@mail.com',
+    password: 'password',
+    confirmed_at: Time.now
+)
+user2.save!
+
+users = User.all
+
 puts "Seed finished"
 puts "#{Topic.count} topics created!"
 puts "#{Subject.count} subjects created!"
-puts user
+puts users

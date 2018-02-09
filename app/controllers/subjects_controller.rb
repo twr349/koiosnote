@@ -16,7 +16,7 @@ class SubjectsController < ApplicationController
     def create
         @subject = Subject.new(params[:id])
         @subject.name = params[:subject][:name]
-        #@subject.user = current_user 
+        @subject.user = current_user 
        if @subject.save
          redirect_to @subject, notice: "Subject was saved successfully."
        else
