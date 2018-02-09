@@ -47,7 +47,7 @@ class SubjectsController < ApplicationController
  
       if @subject.destroy
         flash[:notice] = "\"#{@subject.name}\" was deleted successfully."
-        redirect_to action: :index
+        redirect_to root_path
       else
         flash.now[:alert] = "There was an error deleting the subject."
         render :show
