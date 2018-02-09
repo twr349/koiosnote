@@ -3,11 +3,11 @@ Rails.application.routes.draw do
   
   
   resources :subjects do
-    resources :topics  
+    resources :topics, except: [:index]  
   end
 
   devise_for :users
 
-  root to: 'user#show'
+  root to: 'subjects#index'
 
 end

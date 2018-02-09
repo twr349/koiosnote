@@ -1,0 +1,49 @@
+
+  
+ <div class="row">
+   <ul class='nav nav-tabs navbar-left'>
+                 <li>
+                   <%= link_to new_subject_path, class: "btn btn-default" do %>
+                   <span class="glyphicon glyphicon-plus"> - Subject</span>
+                   <% end %>
+                 </li>
+                 
+                
+               </ul>
+   <div class="col-md-4">
+     <% @subjects.each do |subject| %>
+       <div class="media">
+         <div class="media-body">
+           <h4 class="media-heading">
+             <%= link_to subject.name, subject %>
+           </h4>
+         </div>
+       </div>
+     <% end %>
+   </div>
+   <div class="col-md-4">
+     <%= link_to "New Subject", new_subject_path, class: 'btn btn-success' %>
+   </div>
+ </div>
+ 
+ <h1>Subjects</h1>
+  <ul class="nav nav-tabs">
+    <li class="dropdown">
+      <%= link_to new_subject_path, class: "btn btn-default" do %>
+      <span class="glyphicon glyphicon-plus"> - Subject</span>
+      <% end %>
+    </li>
+    <% @subjects.each do |subject| %>
+     <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= subject.name %>
+          <span class="caret"></span>
+        </a>
+       
+          <ul class="dropdown-menu">
+         
+           
+          </ul>
+       
+      </li>
+    <% end %>
+  </ul>

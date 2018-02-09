@@ -2,6 +2,7 @@ class SubjectsController < ApplicationController
     
     def index
         @subjects = Subject.all
+        @subjects = Subject.order('name ASC')
     end
     
     def show
@@ -13,9 +14,9 @@ class SubjectsController < ApplicationController
     end
     
     def create
-        @subject = Subject.new
+        @subject = Subject.new(params[:id])
         @subject.name = params[:subject][:name]
-        @subject.user = current_user 
+        #@subject.user = current_user 
        if @subject.save
          redirect_to @subject, notice: "Subject was saved successfully."
        else
