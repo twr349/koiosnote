@@ -16,8 +16,9 @@
 //= require bootstrap
 //= require_tree .
 
+
 $(document)
-    .one('focus.autoExpand', 'textarea.autoExpand', function(){
+    .on('focus.autoExpand', 'textarea.autoExpand', function(){
         var savedValue = this.value;
         this.value = '';
         this.baseScrollHeight = this.scrollHeight;
@@ -29,3 +30,5 @@ $(document)
         rows = Math.ceil((this.scrollHeight - this.baseScrollHeight) / 16);
         this.rows = minRows + rows;
     });
+    
+   
