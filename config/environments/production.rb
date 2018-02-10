@@ -79,5 +79,5 @@ Rails.application.configure do
   
   # Devise Configuration 
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_url_options = { host: 'https://koiosnote-twr349.c9users.io' }
+  config.action_mailer.default_url_options = { host: 'https://git.heroku.com/agile-ridge-54244.git' }
 end
