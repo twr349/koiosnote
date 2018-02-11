@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+@import "https://fonts.googleapis.com/css?family=Bevan"; 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -33,6 +34,7 @@
 .subject-index {
   text-align: center;
 }
+
 .subject-buttons {
   margin: 10px;
   height: 50px;
@@ -40,7 +42,21 @@
 
 .btn {
   margin: 5px;
-  
+}
+
+.compbook {
+  position: relative;
+  text-align: center;
+  font-family: 'Bevan', cursive;;
+  color: black;
+}
+
+
+.centered {
+  position: absolute;
+  top: 48.5%;
+  left: 51%;
+  transform: translate(-50%, -50%);
 }
 
 
