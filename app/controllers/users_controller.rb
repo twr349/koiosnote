@@ -1,4 +1,4 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
   def show
     @subject = Subject.new
     @subjects = current_user.subjects
