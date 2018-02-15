@@ -1,7 +1,7 @@
 class TopicsController < ApplicationController
     
     def show
-        @subject = Subject.find(params[:subject_id])
+        #@subject = Subject.find(params[:subject_id])
         @topic = Topic.find(params[:id]) 
     end
     
@@ -47,7 +47,7 @@ class TopicsController < ApplicationController
         
       if @topic.destroy
        flash[:notice] = "\"#{@topic.title}\" was deleted successfully."
-       redirect_to @subject
+       redirect_to subject_path(@subject)
       else
        flash.now[:alert] = "There was an error deleting the topic."
        render :show
@@ -56,7 +56,7 @@ class TopicsController < ApplicationController
     
     private
       def topic_params
-        params.require(:topic).permit(:title, :body)
+        params.require(:topic).permit(:title, :body, :subject_id)
       end
    
 
