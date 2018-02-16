@@ -2,7 +2,6 @@
 7.times do 
     Subject.create!(
     name: Faker::Lorem.word, 
-   
 )
 end
 
@@ -13,7 +12,6 @@ subjects = Subject.all
     Topic.create!(
     subject: subjects.sample,
     title: Faker::Lorem.word,
-    body: Faker::Lorem.paragraph,
 )
 end
 

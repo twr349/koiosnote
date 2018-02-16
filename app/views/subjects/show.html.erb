@@ -1,24 +1,24 @@
 <h1><%= @subject.name %></h1>
 <h2>Add a topic<%= link_to "", new_subject_topic_path(@subject), class: 'btn btn-default btn-lg glyphicon glyphicon-plus' %></h2>
- <%= link_to "", root_path, class: "btn btn-default glyphicon glyphicon-arrow-left" %>
- <%= link_to "", edit_subject_path, class: 'btn btn-success glyphicon glyphicon-edit' %>
- <%= link_to "", @subject, method: :delete, class: 'btn btn-danger glyphicon glyphicon-remove-sign', data: { confirm: 'Are you sure you want to delete this subject?' } %>
+<%= link_to "", root_path, class: "btn btn-default glyphicon glyphicon-arrow-left" %>
+<%= link_to "", edit_subject_path, class: 'btn btn-success glyphicon glyphicon-edit' %>
+<%= link_to "", @subject, method: :delete, class: 'btn btn-danger glyphicon glyphicon-remove-sign', data: { confirm: 'Are you sure you want to delete this subject?' } %>
  
- <div class="row">
-   <div class="col-md-8">
-     <% @subject.topics.each do |topic| %>
-       <div class="media">
-         <div class="media-body">
-           <h4 class="media-heading">
-             <%= link_to topic.title, subject_topic_path(@subject, topic) %>
-             <p><%= topic.body.split(".").first + '.' %></p>
-           </h4>
-         </div>
-       </div>
-     <% end %>
-   </div>
-   <div class="col-md-4">
+<div class="row">
+  <div class="col-md-8">
+    <% @subject.topics.each do |topic| %>
+      <div class="media">
+        <div class="media-body">
+          <h4 class="media-heading">
+            <%= link_to topic.title, subject_topic_path(@subject, topic) %>
+            <p><%= topic.body.split(".").first + '.' %></p>
+          </h4>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-md-4">
      
-   </div>
- </div>
+  </div>
+</div>
  

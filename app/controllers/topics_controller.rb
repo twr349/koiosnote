@@ -14,7 +14,6 @@ class TopicsController < ApplicationController
         @subject = Subject.find(params[:subject_id])
         @topic = @subject.topics.build(topic_params)
        
-        
         if @topic.save
             flash[:notice] = "Topic was saved."
             redirect_to [@subject, @topic]
@@ -56,9 +55,6 @@ class TopicsController < ApplicationController
     
     private
       def topic_params
-        params.require(:topic).permit(:title, :body)
+        params.require(:topic).permit(:title)
       end
-   
-
-    
 end

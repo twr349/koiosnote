@@ -14,7 +14,6 @@ class NotesController < ApplicationController
         @topic = Topic.find(params[:topic_id])
         @note = @topic.notes.build(note_params)
        
-        
         if @note.save
             flash[:notice] = "Note was saved."
             redirect_to [@topic, @note]
@@ -25,7 +24,7 @@ class NotesController < ApplicationController
     end
     
     def edit
-       @note = Note.find(params[:id])
+        @note = Note.find(params[:id])
     end
     
     def update
@@ -45,20 +44,17 @@ class NotesController < ApplicationController
         @topic = Topic.find(params[:topic_id])
         @note = Note.find(params[:id])
         
-      if @note.destroy
-       flash[:notice] = "\"#{@note.title}\" was deleted successfully."
-       redirect_to @topic
-      else
-       flash.now[:alert] = "There was an error deleting the note."
-       render :show
-      end
+        if @note.destroy
+          flash[:notice] = "\"#{@note.title}\" was deleted successfully."
+          redirect_to @topic
+        else
+          flash.now[:alert] = "There was an error deleting the note."
+          render :show
+        end
     end
     
     private
       def note_params
         params.require(:note).permit(:title, :body, :review)
       end
-   
-
-    
 end
