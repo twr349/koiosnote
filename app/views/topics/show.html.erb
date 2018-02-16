@@ -1,5 +1,4 @@
 <h1><%= @topic.title %></h1>
-<h2>Add a note<%= link_to "", new_topic_note_path(@topic), class: 'btn btn-default btn-lg glyphicon glyphicon-plus' %></h2>
 <%= link_to "", @topic.subject, class: "btn btn-default glyphicon glyphicon-arrow-left" %>
 <%= link_to "", edit_subject_topic_path(@topic), class: 'btn btn-success glyphicon glyphicon-edit' %>
 <%= link_to "", [@topic.subject, @topic], method: :delete, class: 'btn btn-danger glyphicon glyphicon-remove-sign', data: { confirm: 'Are you sure you want to delete this topic?' } %>
@@ -9,15 +8,13 @@
     <% @topic.notes.each do |note| %>
       <div class="media">
         <div class="media-body">
-          <h4 class="media-heading">
+          <h2 class="media-heading">
             <%= link_to note.title, topic_note_path(@topic, note) %>
             <p><%= truncate(note.body) %></p>
-          </h4>
+          </h2>
         </div>
       </div>
     <% end %>
-  </div>
-  <div class="col-md-4">
-     
+  <h3>Add Notes<%= link_to "", new_topic_note_path(@topic), class: 'btn btn-default btn-lg glyphicon glyphicon-plus' %></h3>
   </div>
 </div>
