@@ -1,6 +1,6 @@
 <h1><%= @topic.title %></h1>
 <h2>Add a note<%= link_to "", new_topic_note_path(@topic), class: 'btn btn-default btn-lg glyphicon glyphicon-plus' %></h2>
- <%= link_to "", @subject, class: "btn btn-default glyphicon glyphicon-arrow-left" %>
+ <%= link_to "", @topic.subject, class: "btn btn-default glyphicon glyphicon-arrow-left" %>
  <%= link_to "", edit_subject_topic_path(@topic), class: 'btn btn-success glyphicon glyphicon-edit' %>
  <%= link_to "", [@topic.subject, @topic], method: :delete, class: 'btn btn-danger glyphicon glyphicon-remove-sign', data: { confirm: 'Are you sure you want to delete this topic?' } %>
  
