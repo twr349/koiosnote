@@ -20,6 +20,7 @@
 .navbar-brand {
   padding: 5px; /* firefox bug fix */
 }
+
 .navbar-brand>img {
   height: 100%;
   padding: 15px; /* firefox bug fix */
@@ -45,12 +46,19 @@
 }
 
 .compbook {
+  margin: auto 0;
   position: relative;
   text-align: center;
-  font-family: 'Bevan', cursive;;
+  font-family: 'Bevan', cursive;
   color: black;
+  
 }
-
+.compbook img {
+  margin: auto 0;
+  padding: 5px;
+  background: white;
+  border-radius: 25px;
+}
 
 .centered {
   position: absolute;
@@ -59,4 +67,16 @@
   transform: translate(-50%, -50%);
 }
 
+.topic-show {
+  margin: auto;
+  text-align: center;
+}
 
+.topic-show > .notes {
+  text-decoration: none;
+}
+
+.notes {
+  color: black;
+  border-radius: 25px;
+}
