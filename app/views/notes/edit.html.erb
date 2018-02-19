@@ -1,7 +1,8 @@
+<div class="form-submit">
 <h1>Edit Note</h1>
  
  <div class="row">
-   <div class="col-md-8">
+   <div class="col-md-12">
      <%= form_for [@note.topic, @note] do |f| %>
        <div class="form-group">
          <%= f.label :title %>
@@ -12,8 +13,13 @@
          <%= f.text_area :body, rows: 8, class: 'form-control textarea autoExpand', placeholder: "Enter note" %>
        </div>
        <div class="form-group">
+          <%= f.label "Quick Review" %>
+          <%= f.check_box :review %>
+       </div>
+       <div class="form-group">
          <%= f.submit "Save", class: 'btn btn-success' %>
        </div>
      <% end %>
    </div>
  </div>
+</div>

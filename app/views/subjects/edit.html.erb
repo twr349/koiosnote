@@ -1,13 +1,15 @@
-<h1>Edit Subject</h1>
- <%= link_to "", @subject, class: "btn btn-default glyphicon glyphicon-arrow-left" %>
+<div class="form-submit">
+<h1>Edit Notebook</h1>
+ 
  <div class="row">
-   <div class="col-md-8">
+   <div class="col-md-12">
      <%= form_for @subject do |f| %>
        <div class="form-group">
-         <%= f.label :name %>
-         <%= f.text_field :name, class: 'form-control', placeholder: "Enter subject name" %>
+         <%= f.text_field :name, class: 'form-control', placeholder: "Enter notebook name" %>
        </div>
        <%= f.submit "Save", class: 'btn btn-success' %>
      <% end %>
+     <%= link_to "", @subject, class: "btn btn-default glyphicon glyphicon-arrow-left" %>
    </div>
  </div>
+</div>

@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+@import "https://fonts.googleapis.com/css?family=Roboto";
 @import "https://fonts.googleapis.com/css?family=Bevan"; 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -51,8 +52,8 @@
   text-align: center;
   font-family: 'Bevan', cursive;
   color: black;
-  
 }
+
 .compbook img {
   margin: auto 0;
   padding: 5px;
@@ -67,16 +68,67 @@
   transform: translate(-50%, -50%);
 }
 
-.topic-show {
-  margin: auto;
+.subject-show {
   text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.subject-show  {
+  text-decoration: none;
+}
+
+.topics:hover {
+  background-color: #dee1e5;
+}
+
+.topics {
+  color: black;
+  border-radius: 25px;
+  border-left: 2px black solid;
+  border-bottom: 2px black solid;
+}
+
+.topic-show {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 .topic-show > .notes {
   text-decoration: none;
 }
 
+.notes:hover {
+  background-color: #dee1e5;
+}
+
 .notes {
   color: black;
   border-radius: 25px;
+  border-left: 2px black solid;
+  border-bottom: 2px black solid;
 }
+
+.note-show {
+  font-weight: medium; 
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: black;
+  border-radius: 25px;
+  border-left: 2px black solid;
+  border-bottom: 2px black solid;
+}
+
+.form-submit {
+  font-weight: medium; 
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: black;
+  border-radius: 25px;
+  border-left: 2px black solid;
+  border-bottom: 2px black solid;
+}
+
+.form-group {
+  padding: 5px;
+}
+
