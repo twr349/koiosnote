@@ -12,6 +12,7 @@
       <% end %>
       </div>
     <% end %>
-  </div>
+    <%= render partial: 'notes/review', locals: { note: @note } %>
+    </div>
   <h2>New Notebook  <%= link_to "", new_subject_path, class: 'btn btn-default btn-lg glyphicon glyphicon-plus' %></h2>
 </div>

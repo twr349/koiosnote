@@ -1,6 +1,7 @@
 class NotesController < ApplicationController
     
     def show
+        @notes = Note.all
         @topic = Topic.find(params[:topic_id])
         @note = Note.find(params[:id]) 
     end
@@ -13,6 +14,7 @@ class NotesController < ApplicationController
     def create
         @topic = Topic.find(params[:topic_id])
         @note = @topic.notes.build(note_params)
+        @note.user = current_user
        
         if @note.save
             flash[:notice] = "Note was saved."
