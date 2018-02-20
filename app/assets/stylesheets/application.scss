@@ -138,3 +138,29 @@
   padding: 5px;
 }
 
+.note-pills { 
+  border-radius: 25px;
+  border-left: 2px black solid;
+  border-bottom: 2px black solid; 
+}
+
+.nav-pills > li > a { 
+  border-radius: 25px;
+}
+.scrollit {
+  margin-top: 10px;
+  height: 77vh;
+  overflow-y:scroll;  
+}
+
+.review-notes {
+  padding: 10px;
+  border-radius: 25px;
+  border-left: 2px black solid;
+  border-bottom: 2px black solid; 
+}
+
+.review-show {
+  font-weight: medium; 
+  font-family: 'Roboto', sans-serif;
+}  

@@ -4,4 +4,9 @@ class UsersController < ApplicationController
     @subjects = current_user.subjects
     @notes = current_user.notes
   end
+  
+  def review
+    @notes = current_user.notes
+    
+  end
 end

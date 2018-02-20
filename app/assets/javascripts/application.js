@@ -31,4 +31,3 @@ $(document)
         this.rows = minRows + rows;
     });
     
-   
