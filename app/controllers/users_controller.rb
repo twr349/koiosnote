@@ -20,5 +20,11 @@ class UsersController < ApplicationController
       end
     end
   end
+  
+  def destroy
+    User.find(params[:id]).destroy
+    flash[:success] = "Account deleted"
+    redirect_to new_user_session_url
+  end
 
 end
