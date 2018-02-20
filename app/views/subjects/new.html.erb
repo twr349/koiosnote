@@ -1,14 +1,14 @@
 <div class="form-submit">
-<h1>New Notebook</h1>
- <div class="row">
-   <div class="col-md-12">
-     <%= form_for @subject do |f| %>
-       <div class="form-group">
-          <%= f.text_field :name, class: 'form-control', placeholder: "Enter notebook name" %>
-       </div>
-         <%= f.submit "Save", class: 'btn btn-success' %>
-     <% end %>
-     <%= link_to "", :back, class: "btn btn-default glyphicon glyphicon-arrow-left" %>
-   </div>
- </div>
+  <h1>New Notebook</h1>
+  <div class="row">
+    <div class="col-md-12">
+      <%= form_for @subject do |f| %>
+        <div class="form-group">
+           <%= f.text_field :name, class: 'form-control', placeholder: "Enter notebook name" %>
+        </div>
+          <%= f.submit "Save", class: 'btn btn-success' %>
+      <% end %>
+      <%= link_to "", :back, class: "btn btn-default glyphicon glyphicon-arrow-left" %>
+    </div>
+  </div>
 </div>
