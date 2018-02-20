@@ -9,9 +9,11 @@ Rails.application.routes.draw do
   end
 
   devise_for :users  
+  
+  resources :users, only: :destroy
     
   get '/views/users/review.html.erb', to: 'users#review', as: "review"
-  post '/views/users/review.html.erb', to: 'users#review'
+ 
   
   root to: 'users#show'
 

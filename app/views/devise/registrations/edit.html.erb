@@ -37,7 +37,7 @@
   <% end %>
 
   <h4>Cancel my account</h4>
-  <%= button_to "Cancel my account", user_registration_path, method: :delete, data: { confirm: "You sure?" }, class: "btn btn-danger" %>
+  <%= button_to "Cancel my account", @user, method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
 
   <%= link_to "", :back, class: "btn btn-default glyphicon glyphicon-arrow-left" %>
 </div>
