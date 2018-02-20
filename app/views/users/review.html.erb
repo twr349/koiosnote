@@ -5,6 +5,7 @@
         <% @notes.each do |note| %>
           <% if note.review == true %>
             <li><a href="#<%= note.title %>"><%= note.title %></a></li>
+            
           <% end %>
         <% end %>
       </ul>
@@ -18,7 +19,6 @@
           <p><%= note.body %></p>
         </div>  
       <% end %>
-       
     <% end %>
   </div>
 </div>

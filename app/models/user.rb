@@ -3,5 +3,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
          
   has_many :subjects
+  has_many :topics
   has_many :notes
+  
 end

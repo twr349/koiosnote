@@ -1,5 +1,9 @@
 class NotesController < ApplicationController
     
+    def index
+     @note = Note.find_by_id
+    end
+    
     def show
         @notes = Note.all
         @topic = Topic.find(params[:topic_id])
