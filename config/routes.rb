@@ -10,8 +10,7 @@ Rails.application.routes.draw do
 
   devise_for :users  
   
-  resources :users, only: :destroy
-    
+
   get '/views/users/review.html.erb', to: 'users#review', as: "review"
  
   
