@@ -3,7 +3,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
          
   has_many :subjects, dependent: :destroy
-  has_many :topics, dependent: :destroy
   has_many :notes, dependent: :destroy
   
 end
