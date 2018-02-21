@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'thor', '0.19.1'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
+gem 'serviceworker-rails'
  
 group :production do
   gem 'pg', '~> 0.20'
