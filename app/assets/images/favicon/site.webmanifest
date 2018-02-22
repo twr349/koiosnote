@@ -1,7 +1,7 @@
 {
    "name": "Koios Note",
    "short_name": "Koios Note",
-   "start_url": "/",
+   "start_url": "/users/sign_in",
    "icons": [
         {
             "src": "android-chrome-192x192.png",
