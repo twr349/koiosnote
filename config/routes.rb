@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   
 
   get '/views/users/review.html.erb', to: 'users#review', as: "review"
- 
+  patch '/mark_reviewed/:id', to: 'notes#mark_reviewed', as: "mark_reviewed"
   
   root to: 'users#show'
 

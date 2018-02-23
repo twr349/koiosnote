@@ -59,6 +59,14 @@ class NotesController < ApplicationController
         end
     end
     
+    def mark_reviewed
+        @note = Note.find(params[:id])
+        if @note.review == true
+            @note.update_attribute(:review, false)
+            redirect_to review_path
+        end
+    end
+    
     private
       def note_params
         params.require(:note).permit(:title, :body, :review)

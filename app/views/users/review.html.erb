@@ -1,26 +1,28 @@
-<div class="row review-show">
-  <div class="note-pills"
-    <nav class="col-md-12 affix">
-      <ul class="nav nav-pills">
-        <% @notes.each do |note| %>
-          <% if note.review == true %>
-            <li><a href="#<%= note.title %>"><%= note.title %></a></li>
-            
-          <% end %>
-        <% end %>
-      </ul>
-    </nav>
+<% if @notes.count == 0 %>
+  <div class="jumbotron">
+    <h1>Great Job Nothing to Review</h1>
   </div>
-  <div class="col-md-12 scrollit">
-    <% @notes.each do |note| %>
-      <% if note.review == true %> 
+<% else %>
+  <div class="row review-show">
+    <div class="note-pills"
+      <nav class="col-md-12 affix">
+        <ul class="nav nav-pills">
+          <% @notes.each do |note| %>
+            <li><a href="#<%= note.title %>"><%= note.title %></a></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+    <div class="col-md-12 scrollit">
+      <% @notes.each do |note| %>
         <div class="review-notes">
           <h1 id="<%= note.title %>"><%= note.title %></h1>
           <p><%= note.body %></p>
+          <%= link_to "Mark Reviewed", mark_reviewed_path(note), method: :patch, class: 'btn btn-default' %>
         </div>  
       <% end %>
-    <% end %>
+    </div>
   </div>
-</div>
+<% end %>
 
   
